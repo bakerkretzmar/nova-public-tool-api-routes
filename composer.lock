@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5c1bfbdbc1b6038684b69f93e3c78d6",
+    "content-hash": "d1b976c5456488e921dff2b17e8a2dde",
     "packages": [
         {
             "name": "brick/math",
@@ -6133,6 +6133,42 @@
             "time": "2023-03-29T21:42:15+00:00"
         },
         {
+            "name": "test/my-tool",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/MyTool",
+                "reference": "73cc46b4e574a7dc2be1d5dbcdb565086da9f66f"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Test\\MyTool\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Test\\MyTool\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova tool.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.6",
             "source": {
@@ -8825,7 +8861,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "test/my-tool": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
